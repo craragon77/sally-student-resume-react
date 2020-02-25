@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally Student React Assignment</title>
+</head>
+<body>
+    <div id="sally"></div>
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+        function App(){
+            const picture = 'https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg';
+            const alt = 'Sally Student';
+            return (
+                <div>
+                    <h1>Sally Student Resume!</h1>
+                    <img src={picture} alt={alt}></img>
+                    <h2>Education</h2>
+                        <ul>
+                            <li>Tufts University Class of 2019 (BA in Computer Science)</li>
+                            <li>University of Maryland Class of 2020 (MA in Computer Science)</li>
+                        </ul>
+                    <h2>Experience</h2>
+                        <ul>
+                            <li>Intern at US Department of the Interior(2017)</li>
+                            <li>Programmer at US Department of State(2020)</li>
+                        </ul>
+                </div>
+            );
+        };
+        ReactDOM.render(
+            <App />,
+            document.querySelector('#sally')
+        );
+    </script>
+</body>
+</html>
